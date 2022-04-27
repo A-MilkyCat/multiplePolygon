@@ -1,6 +1,7 @@
 import math, pyautogui
 
 n = 0
+print('請輸入為正幾角形(不為偶數) : ', end='')
 while n %2 != 1:
     n = int(input())
 pyautogui.sleep(5)
@@ -19,10 +20,10 @@ for i in range(n):
     nowX = nextX
     nowY = nextY
 point[n] = [side,0]
-for i in range(len(point)):
-    for j in range(len(point[i])):
-        print(point[i][j],end=' ')
-    print('')
+# for i in range(len(point)):
+#     for j in range(len(point[i])):
+#         print(point[i][j],end=' ')
+#     print('')
 s = int(n/2)
 i = 0
 j = s +1
@@ -41,4 +42,3 @@ while j != n+1:
     pyautogui.drag(nextX - nowX, nowY-nextY, duration=0.05)
     nowX = nextX
     nowY = nextY
-

@@ -1,5 +1,5 @@
 import pyautogui, math
-
+print('請輸入為幾邊形 : ',end='')
 n = int(input())
 pyautogui.sleep(5)
 side = 200
@@ -19,6 +19,7 @@ for i in range(n):
 point[n] = point[0]
 propotion = 0.15
 while side >= 50:
+# for j in range(1):
     last = [point[0][0], point[0][1]]
     nowX = point[0][0]
     nowY = point[0][1]
@@ -34,3 +35,4 @@ while side >= 50:
     point[n] = point[0]
     pyautogui.drag(point[0][0] - last[0], last[1] - point[0][1],duration=0.1)
     side = math.sqrt((point[0][0]-point[1][0])**2 + (point[0][1]-point[1][1])**2)
+a = input()
